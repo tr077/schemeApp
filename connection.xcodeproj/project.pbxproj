@@ -10,6 +10,11 @@
 		E91E20D317294CB00079830E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91E20D217294CB00079830E /* Foundation.framework */; };
 		E91E20D617294CB00079830E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E91E20D517294CB00079830E /* main.m */; };
 		E91E20DA17294CB00079830E /* connection.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = E91E20D917294CB00079830E /* connection.1 */; };
+		E92D9623172E88B5008EA2C2 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = E92D9622172E88B5008EA2C2 /* Student.m */; };
+		E92D9626172E8D70008EA2C2 /* SchemeToCouch.m in Sources */ = {isa = PBXBuildFile; fileRef = E92D9625172E8D70008EA2C2 /* SchemeToCouch.m */; };
+		E92D9629172E924E008EA2C2 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = E92D9628172E924E008EA2C2 /* Course.m */; };
+		E96BE002172EF25400292A69 /* Scheme.m in Sources */ = {isa = PBXBuildFile; fileRef = E96BE001172EF25400292A69 /* Scheme.m */; };
+		E98F9F3C172FEEBE00C79DE3 /* Admin.m in Sources */ = {isa = PBXBuildFile; fileRef = E98F9F3B172FEEBE00C79DE3 /* Admin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +36,16 @@
 		E91E20D517294CB00079830E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E91E20D817294CB00079830E /* connection-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "connection-Prefix.pch"; sourceTree = "<group>"; };
 		E91E20D917294CB00079830E /* connection.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = connection.1; sourceTree = "<group>"; };
+		E92D9621172E88B5008EA2C2 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Student.h; path = ../Student.h; sourceTree = "<group>"; };
+		E92D9622172E88B5008EA2C2 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Student.m; path = ../Student.m; sourceTree = "<group>"; };
+		E92D9624172E8D70008EA2C2 /* SchemeToCouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemeToCouch.h; sourceTree = "<group>"; };
+		E92D9625172E8D70008EA2C2 /* SchemeToCouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemeToCouch.m; sourceTree = "<group>"; };
+		E92D9627172E924E008EA2C2 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		E92D9628172E924E008EA2C2 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
+		E96BE000172EF25400292A69 /* Scheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scheme.h; sourceTree = "<group>"; };
+		E96BE001172EF25400292A69 /* Scheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scheme.m; sourceTree = "<group>"; };
+		E98F9F3A172FEEBE00C79DE3 /* Admin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Admin.h; sourceTree = "<group>"; };
+		E98F9F3B172FEEBE00C79DE3 /* Admin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Admin.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +66,7 @@
 				E91E20D417294CB00079830E /* connection */,
 				E91E20D117294CB00079830E /* Frameworks */,
 				E91E20D017294CB00079830E /* Products */,
+				E91E20D717294CB00079830E /* Supporting Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,8 +90,16 @@
 			isa = PBXGroup;
 			children = (
 				E91E20D517294CB00079830E /* main.m */,
-				E91E20D917294CB00079830E /* connection.1 */,
-				E91E20D717294CB00079830E /* Supporting Files */,
+				E92D9621172E88B5008EA2C2 /* Student.h */,
+				E92D9622172E88B5008EA2C2 /* Student.m */,
+				E92D9624172E8D70008EA2C2 /* SchemeToCouch.h */,
+				E92D9625172E8D70008EA2C2 /* SchemeToCouch.m */,
+				E92D9627172E924E008EA2C2 /* Course.h */,
+				E92D9628172E924E008EA2C2 /* Course.m */,
+				E96BE000172EF25400292A69 /* Scheme.h */,
+				E96BE001172EF25400292A69 /* Scheme.m */,
+				E98F9F3A172FEEBE00C79DE3 /* Admin.h */,
+				E98F9F3B172FEEBE00C79DE3 /* Admin.m */,
 			);
 			path = connection;
 			sourceTree = "<group>";
@@ -83,9 +107,11 @@
 		E91E20D717294CB00079830E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E91E20D917294CB00079830E /* connection.1 */,
 				E91E20D817294CB00079830E /* connection-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = connection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +166,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E91E20D617294CB00079830E /* main.m in Sources */,
+				E92D9623172E88B5008EA2C2 /* Student.m in Sources */,
+				E92D9626172E8D70008EA2C2 /* SchemeToCouch.m in Sources */,
+				E92D9629172E924E008EA2C2 /* Course.m in Sources */,
+				E96BE002172EF25400292A69 /* Scheme.m in Sources */,
+				E98F9F3C172FEEBE00C79DE3 /* Admin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +273,7 @@
 				E91E20DF17294CB00079830E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
