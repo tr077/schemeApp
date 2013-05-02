@@ -13,23 +13,23 @@
 
 -(id)init
 {
-    return [self initWithLastName:@"" firstName:@"" course:@""];
+    return [self initWithLastName:@"" firstName:@"" studentId:@""];
 }
--(id)initWithLastName:(NSString *)lastName firstName:(NSString *)firstName course:(NSString *)course
+-(id)initWithLastName:(NSString *) lastName firstName:(NSString *) firstName studentId:(NSString *) studentId
 {
     self =[super init];
     if (self){
         self.lastName = lastName;
         self.firstName = firstName;
-        self.course = course;
+        self.studentId = studentId;
     }
     return self;
 }
--(id)studentGetMessage:(Admin *)message
+-(id)readMessageFromAdmin:(Admin *)message
 {
     return message;
 }
--(id)allStudentGetMessage:(Admin *)message
+-(id)readGeneralMessage:(Admin *)message
 {
     return message;
 }
@@ -39,7 +39,8 @@
     NSMutableDictionary *selfAsJson = [[NSMutableDictionary alloc]init];
     selfAsJson[@"lastName"] = self.lastName;
     selfAsJson[@"firstName"] = self.firstName;
-    selfAsJson[@"course"] = self.course;
+    selfAsJson[@"studentId"] = self.studentId;
+
     
     return selfAsJson;
     
@@ -52,6 +53,10 @@
         [result addObject:[object jsonValue]];
     }
     return result;
+}
+-(NSString *)description
+{
+    return [NSString stringWithFormat:@"Student:%@ %@ studentID:%@",[self firstName],[self lastName], [self studentId]];
 }
 
 @end

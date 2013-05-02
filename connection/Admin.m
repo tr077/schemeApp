@@ -18,7 +18,7 @@
     return self;
 }
 
--(id)initWithMessage:(NSString *)message toStudent:(Student *)student
+-(id)initWithMessage:(NSString *)message toOneStudent:(Student *)student
 {
     self = [super init];
     if(self){
@@ -26,6 +26,7 @@
         }
     return self;
 }
+
 -(id)jsonValue
 {
     NSMutableDictionary *selfAsJson = [[NSMutableDictionary alloc]init];
@@ -43,6 +44,8 @@
     }
     return result;
 }
+
+
 
 
 @end

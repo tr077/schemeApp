@@ -12,9 +12,9 @@
 
 -(id)init
 {
-    return [self initWithCourseName:@"" teacher:@"" date:@"" classRoom:@"" tasks:@""];
+    return [self initWithCourseName:@"" teacher:@"" date:@"" classRoom:@"" tasks:@"" studentsInCourse:@[]];
 }
--(id)initWithCourseName:(NSString *) courseName teacher:(NSString *) teacher date:(NSString *) date classRoom:(NSString *) classRoom tasks:(NSString *)tasks
+-(id)initWithCourseName:(NSString *) courseName teacher:(NSString *) teacher date:(NSString *) date classRoom:(NSString *) classRoom tasks:(NSString *)tasks studentsInCourse:(NSArray *)studentsInCourse
 {
     self =[super init];
     if (self){
@@ -23,6 +23,9 @@
         self.date = date;
         self.classRoom = classRoom;
         self.tasks = tasks;
+        self.studentsInCourse = studentsInCourse;
+        self->_id = [[NSUUID UUID] UUIDString];
+        self->_rev = [[NSUUID UUID] UUIDString];
     }
     return self;
 }
@@ -34,8 +37,10 @@
     selfAsJson[@"date"] = self.date;
     selfAsJson[@"classRoom"] = self.classRoom;
     selfAsJson[@"tasks"] = self.tasks;
+    selfAsJson[@"studentsInCourse"] = self.studentsInCourse;
+    selfAsJson[@"id"] = self.id;
+    selfAsJson[@"rev"] = self.rev;
 
-    
     return selfAsJson;
     
 }
@@ -47,6 +52,20 @@
         [result addObject:[object jsonValue]];
     }
     return result;
+}
+-(NSUInteger)hash
+{
+    return 37 * [self.id hash];
+}
+-(BOOL)isEqual:(id)other
+{
+    if(other == self){
+        return YES;
+    }
+    if(other && [other isMemberOfClass:[self class]]){
+        return [[other id]isEqualToString:self.id];
+    }
+    return NO;
 }
 
 @end

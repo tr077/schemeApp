@@ -7,7 +7,12 @@
 //
 
 #import "connectionTest.h"
+#import "SchemeToCouch.h"
+
 
 @implementation connectionTest
+
+
+
 
 @end

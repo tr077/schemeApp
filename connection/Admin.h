@@ -16,7 +16,7 @@
 
 -(id)initWithMessageToAllStudents:(NSString *)message;
 
--(id)initWithMessage:(NSString *)message toStudent:(Student *)student;
+-(id)initWithMessage:(NSString *)message toOneStudent:(Student *)student;
 
 -(id)jsonValue;
 

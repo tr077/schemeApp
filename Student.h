@@ -7,23 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Admin.h"
-
+@class Admin;
 @interface Student : NSObject
 
 @property (nonatomic, copy) NSString * firstName;
 @property (nonatomic, copy) NSString * lastName;
-@property (nonatomic, copy) NSString * course;
 @property (nonatomic, copy) NSString * studentId;
 
--(id)initWithLastName:(NSString *) lastName firstName:(NSString *) firstName course:(NSString *) course;
+-(id)initWithLastName:(NSString *) lastName firstName:(NSString *) firstName studentId:(NSString *) studentId;
 
 -(id)jsonValue;
 
 -(NSArray *)serializeStudentToJson:(id) objects;
 
--(id)studentGetMessage:(Admin *)message;
--(id)allStudentGetMessage:(Admin *)message;
+-(id)readMessageFromAdmin:(Admin *)message;
+-(id)readGeneralMessage:(Admin *)message;
 
 
 

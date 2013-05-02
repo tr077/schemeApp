@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "Student.h"
 #import "Course.h"
-#import "Scheme.h"
 #import "Admin.h"
 
 @interface StudentToCouch : NSObject
@@ -21,6 +20,10 @@
 -(void)getCourseFromCouch:(Course *)course;
 
 -(void)saveMessageToCouch:(Admin *)message;
+-(void)getMessageFromCouch:(Admin *)message;
+
+
+
 
 
 

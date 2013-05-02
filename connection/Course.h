@@ -15,8 +15,13 @@
 @property (nonatomic, copy) NSString *date;
 @property (nonatomic, copy) NSString *classRoom;
 @property (nonatomic, copy) NSString *tasks;
+@property (nonatomic, copy) NSArray *studentsInCourse;
+@property (nonatomic, copy, readonly) NSString *id;
+@property (nonatomic, copy) NSString *rev;
 
--(id)initWithCourseName:(NSString *) courseName teacher:(NSString *) teacher date:(NSString *) date classRoom:(NSString *) classRoom tasks:(NSString *)tasks;
+
+
+-(id)initWithCourseName:(NSString *) courseName teacher:(NSString *) teacher date:(NSString *) date classRoom:(NSString *) classRoom tasks:(NSString *)tasks studentsInCourse:(NSArray *)studentsInCourse;
 
 -(id)jsonValue;
 
