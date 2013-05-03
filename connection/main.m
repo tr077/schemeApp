@@ -30,7 +30,6 @@ int main(int argc, const char * argv[])
         
         Student *appStudent = [[Student alloc]initWithLastName:@"Melhus" firstName:@"Cindy" studentId:@"921023"];
         
-        Student *marketingStudent = [[Student alloc]initWithLastName:@"sffsf" firstName:@"dsffsdsd" studentId:@"sdfdsfs"];
 
         StudentToCouch *connect = [[StudentToCouch alloc]init];
 #pragma - sparar studenterna till couch
@@ -41,7 +40,6 @@ int main(int argc, const char * argv[])
         [connect saveToCouch:djStudent];
         [connect saveToCouch:djStudentTwo];
         [connect saveToCouch:appStudent];
-        [connect saveToCouch:marketingStudent];
 #pragma -  Hämtar studenterna från couch
 
 //        [connect getStudentFromCouch:musicStudent];
@@ -49,15 +47,15 @@ int main(int argc, const char * argv[])
 //        [connect getStudentFromCouch:polishStudentTwo];
 #pragma - skapar kurser och inicjerar dem med studenterna. Kurser äger studenter.
 
-        Course *polishCourse = [[Course alloc]initWithCourseName:@"polish" teacher:@"Anna Wlocz" date:@"2013-11-22" classRoom:@"u66" tasks:@"przeczytaj sfsfsdfs" studentsInCourse:@[polishStudent.description, polishStudentTwo.description]];
+        Course *polishCourse = [[Course alloc]initWithCourseName:@"polish" teacher:@"Anna Wlocz" date:@"2013-11-22" classRoom:@"u66" tasks:@"przeczytaj sfsfsdfs" studentsInCourse:@[polishStudent.description, polishStudentTwo.description, musicStudent.description]];
         
-        Course *musicCourse = [[Course alloc]initWithCourseName:@"music" teacher:@"Ralf Gyllenhammar" date:@"2012-323.2332" classRoom:@"u54" tasks:@"dfsdfds" studentsInCourse:@[musicStudent.description]];
+        Course *musicCourse = [[Course alloc]initWithCourseName:@"music" teacher:@"Ralf Gyllenhammar" date:@"2012-323.2332" classRoom:@"u54" tasks:@"dfsdfds" studentsInCourse:@[musicStudent.description, djStudentTwo.description,djStudent.description]];
         
         Course *djCourse = [[Course alloc]initWithCourseName:@"Dj" teacher:@"Avicci" date:@"2014-02-20" classRoom:@"u22" tasks:@"listen to my new track" studentsInCourse:@[djStudent.description,djStudentTwo.description]];
         
-        Course *appDeveloper = [[Course alloc]initWithCourseName:@"appDeveloper" teacher:@"Anders Carlsson" date:@"2014-03-20" classRoom:@"u23" tasks:@"gör en skolapp" studentsInCourse:@[appStudent.description]];
+        Course *appDeveloper = [[Course alloc]initWithCourseName:@"appDeveloper" teacher:@"Anders Carlsson" date:@"2014-03-20" classRoom:@"u23" tasks:@"gör en skolapp" studentsInCourse:@[appStudent.description, polishStudent.description]];
         
-        Course *marketing = [[Course alloc]initWithCourseName:@"marketing" teacher:@"Jonas lööw" date:@"2014-04-20" classRoom:@"u99" tasks:@"asdsdsasda" studentsInCourse:@[marketingStudent.description]];
+        Course *marketing = [[Course alloc]initWithCourseName:@"marketing" teacher:@"Jonas lööw" date:@"2014-04-20" classRoom:@"u99" tasks:@"asdsdsasda" studentsInCourse:@[appDeveloper.description, polishStudentTwo.description]];
 
 
 

@@ -65,5 +65,9 @@
     }
     return NO;
 }
+//-(NSString *)description
+//{
+//    return [NSString stringWithFormat:@"Coursename:%@ Teacher:%@ Date:%@ Classroom:%@ Tasks:%@ studentsInCourse:",[self courseName] ,[self teacher], [self date], [self classRoom], [self.tasks]];
+//}
 
 @end
