@@ -20,7 +20,6 @@
 -(void)getCourseFromCouch:(Course *)course;
 
 -(void)saveMessageToCouch:(Admin *)message;
--(void)getMessageFromCouch:(Admin *)message;
 
 
 

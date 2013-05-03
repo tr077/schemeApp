@@ -95,26 +95,5 @@
     __unused NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:nil];
     
 }
--(void)getMessageFromCouch:(Admin *)message
-{
-    NSData *asMessage = [NSJSONSerialization dataWithJSONObject:message.jsonValue options:NSJSONWritingPrettyPrinted error:NULL];
-    NSString *messageString = [[NSString alloc]initWithData:asMessage encoding:NSUTF8StringEncoding];
-    
-    NSURL *url= [NSURL URLWithString:@"http://tr077.iriscouch.com/messagestorage"];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
-                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                                       timeoutInterval:10.0];
-    [request setHTTPMethod:@"GET"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request setHTTPBody:[messageString dataUsingEncoding:NSUTF8StringEncoding]];
-    
-    __unused NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:nil];
-    NSLog(@"%@", [[NSString alloc] initWithData:asMessage encoding:NSUTF8StringEncoding]);
-
-    
-}
-
-
-
 
 @end

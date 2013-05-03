@@ -17,7 +17,6 @@
 @property (nonatomic, copy) NSString *tasks;
 @property (nonatomic, copy) NSArray *studentsInCourse;
 @property (nonatomic, copy, readonly) NSString *id;
-@property (nonatomic, copy) NSString *rev;
 
 
 

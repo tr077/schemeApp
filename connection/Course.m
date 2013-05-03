@@ -25,7 +25,6 @@
         self.tasks = tasks;
         self.studentsInCourse = studentsInCourse;
         self->_id = [[NSUUID UUID] UUIDString];
-        self->_rev = [[NSUUID UUID] UUIDString];
     }
     return self;
 }
@@ -39,7 +38,6 @@
     selfAsJson[@"tasks"] = self.tasks;
     selfAsJson[@"studentsInCourse"] = self.studentsInCourse;
     selfAsJson[@"id"] = self.id;
-    selfAsJson[@"rev"] = self.rev;
 
     return selfAsJson;
     
